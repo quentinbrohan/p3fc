@@ -1,0 +1,187 @@
+@import '../styles/vars';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+strong {
+  font-weight: 600!important;
+}
+
+em {
+  font-style: italic!important;
+}
+
+.info {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  h2 {
+    margin: 0;
+    // font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  text-align: center;
+  .wins,
+  .losses {
+    display: flex;
+    align-items: center;
+  }
+
+  .wins .number,
+  .losses .number {
+    font-size: 4rem;
+    margin: 0 0.25rem;
+  }
+
+  .wins {
+    margin-right: 2rem;
+    .number {
+      color: $colGreen;
+    }
+  }
+
+  .losses {
+    .number {
+      color: $colPurple;
+    }
+  }
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  text-align: center;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .fabiocultist-choice {
+    background-color: #333;
+    color: #f0f;
+    fill: red;
+  }
+  button {
+    // margin-bottom: 2rem;
+    // padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    height: 8rem;
+    width: 8rem;
+    // background: $colBlack;
+    font-size: 5rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    transition: all ease 0.1s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1),
+        0 4px 8px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    svg {
+      width: 100%;
+    }
+  }
+}
+
+.svg-icon {
+  img {
+    width: 100%;
+  }
+}
+
+.vs {
+  // width: 5rem;
+  font-size: 8rem;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.game-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  line-height: 150%;
+  .win {
+    div {
+      background: lighten($colGreen, 10);
+      color: lighten($colGreen, 30);
+    }
+  }
+  .lose {
+    div {
+      background: lighten($colPurple, 10);
+      color: lighten($colPurple, 30);
+
+    }
+  }
+  .draw {
+    div {
+      background: $colBlack;
+      color: lighten($colBlack, 30);
+
+    }
+  }
+  > div {
+    z-index: 1;
+    padding: 0 2rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    color: $colWhite;
+    text-align: center;
+    font-size: 2rem;
+  }
+  &-content {
+    display: flex;
+    justify-content: center;
+    p {
+      margin: 2rem 1rem 1.5rem 0;
+    }
+
+    svg {
+      width: 10rem;
+    }
+  }
+  button {
+    margin-bottom: 1em;
+    // width: 50%;
+    // display: block;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    flex-shrink: 1;
+    background-color: $colPurple;
+    color: $colWhite;
+  }
+}
