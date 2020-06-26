@@ -30,6 +30,59 @@ em {
   }
 }
 
+.rules {
+  position: absolute;
+  padding: 0 2rem;
+  top: 10rem;
+  // bottom: 5rem;
+  right: 2rem;
+  cursor: pointer;
+  text-align: right;
+  .choice {
+    margin: 1em 0;
+    ul {
+      font-size: 1.4rem;
+      font-weight: bold;
+      // margin-bottom: 0.5em;
+      li {
+        font-size: 1rem;
+        margin: 0.5em 0;
+        font-weight: normal;
+        list-style: none;
+        color: $colBlack;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &-list {
+    padding: 0.5rem 0;
+    cursor: default;
+  }
+}
+
+// Choices
+.pierre {
+  color: $colPierre;
+}
+
+.fabigeon {
+  color: $colFabigeon;
+}
+
+.fabiosaure {
+  color: $colFabiosaure;
+}
+
+.feuille {
+  color: $colFeuille;
+}
+
+.ciseaux {
+  color: $colCiseaux;
+}
+
 .stats {
   display: flex;
   align-items: center;
@@ -185,3 +238,4 @@ em {
     color: $colWhite;
   }
 }
+
