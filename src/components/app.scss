@@ -27,17 +27,26 @@ em {
     margin: 0;
     // font-size: 1.2rem;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      width: 40%;
+    }
   }
 }
 
 .rules {
   position: absolute;
   padding: 0 2rem;
-  top: 10rem;
+  top: 1rem;
   // bottom: 5rem;
   right: 2rem;
   cursor: pointer;
   text-align: right;
+  background-color: rgba($colWhite, 0.75);
+  border-radius: 0.25rem;
+  @media screen and (max-width: 768px) {
+    top: 1rem;
+  }
+
   .choice {
     margin: 1em 0;
     ul {
@@ -59,6 +68,20 @@ em {
   &-list {
     padding: 0.5rem 0;
     cursor: default;
+  }
+}
+
+details {
+  z-index: 1;
+  padding: 1rem;
+  &:focus {
+    border: 1px solid $colBlack;
+  }
+}
+
+summary {
+  &:focus {
+    outline: none;
   }
 }
 
@@ -184,6 +207,7 @@ em {
   justify-content: center;
   font-size: 2rem;
   line-height: 150%;
+  z-index: 1;
   .win {
     div {
       background: lighten($colGreen, 10);
@@ -212,16 +236,28 @@ em {
     color: $colWhite;
     text-align: center;
     font-size: 2rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+      line-height: 150%;
+      width: 100%;
+    }
   }
   &-content {
     display: flex;
     justify-content: center;
+    align-items: center;
     p {
       margin: 2rem 1rem 1.5rem 0;
     }
 
     svg {
       width: 10rem;
+    }
+
+    img {
+      @media screen and (max-width: 768px) {
+        width: 8rem;
+      }
     }
   }
   button {
@@ -236,6 +272,10 @@ em {
     flex-shrink: 1;
     background-color: $colPurple;
     color: $colWhite;
+    @media screen and (max-width: 768px) {
+      padding: 0.75rem;
+      font-size: 1.8rem;
+    }
   }
 }
 
