@@ -6,3 +6,5 @@ Interface minimaliste.
 React, custom CSS.
 
 [Voir le jeu en ligne](http://pf3c.herokuapp.com/)
+
+![](screenshot.png)
