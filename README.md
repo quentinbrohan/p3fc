@@ -1,10 +1,10 @@
 # P3FC: Pierre Fabigeon Fabiosaure Feuille Ciseaux
 
-Variante du Pierre/Papier/Ciseaux/Lézard/Spock de la série The Big Bang Theory.
+Similar game mode than "Rock, Paper, Scissor, Lizard, Spock" from The Big Bang Theory show.
 
-Interface minimaliste.
-React, custom CSS.
+React with custom SCSS.
+Minimal interface.
 
-[Voir le jeu en ligne](http://pf3c.herokuapp.com/)
+[Live version](http://pf3c.herokuapp.com/)
 
 ![](screenshot.png)
